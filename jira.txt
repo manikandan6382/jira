@@ -1,0 +1,5 @@
+header > nav > project > 4 box > task > tickets > checkbox ~ title ~ profile  ~ date ~ cmd ~ priority ~ left nav  > project title with logo ~  ~ overall persons ~ persons 
+
+> sign up
+
+name , first and last , email,  password , conform password , s

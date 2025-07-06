@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary: #00aeef;
+  --color-white: #f8f9fa;
+  --color-black: #1a1a1a;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+.form-control-float {
+  @apply !bg-transparent placeholder:!text-white !text-white !text-[18px] !border-0 !border-b !shadow-none !pr-7 !w-[100%] lg:!w-100;
+}

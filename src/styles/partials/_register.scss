@@ -1,0 +1,69 @@
+.bg-gradient-theme {
+    background-color: $black;
+    background-image: $theme-gradient;
+}
+.bg-banner {
+    background-image: url("https://res.cloudinary.com/dqbzwzhm4/image/upload/v1749989103/211990_adapted_landscape_2400x2400_ariqsw.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    height: 100dvh;
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    background-size: cover;
+    animation: bgPositionAnimation 2s ease-in-out 1 forwards;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color: $black, $alpha: 0.678);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+@keyframes bgPositionAnimation {
+    from {
+        background-position: 100% right;
+    }
+    to {
+        background-position: center left;
+    }
+}
+
+.login-card {
+    --primary500: rgba(0, 175, 239, 0.698);
+    --white0: hsla(0, 0%, 100%, 0%);
+    --white: hwb(0 100% 0% / 0.8);
+    --card-deg: 135deg;
+    position: relative;
+    isolation: isolate;
+    border: 1px solid rgba($color: $white, $alpha: 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow:
+        rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    &:before,
+    &:after {
+        border-radius: inherit;
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    &:before {
+        border: 2px solid var(--primary500);
+        mask-image: linear-gradient(var(--card-deg), var(--white), var(--white0) 50%);
+    }
+    &:after {
+        border: 2px solid var(--primary500);
+        mask-image: linear-gradient(var(--card-deg), var(--white0) 50%, var(--white));
+    }
+}
